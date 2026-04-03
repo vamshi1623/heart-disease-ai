@@ -1,6 +1,21 @@
-venv/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv310/
+venv/
+
+# PyCharm settings
 .idea/
-.env
-.DS_Store
+
+# Model / dataset files
+*.keras
+*.h5
+*.joblib
+*.pkl
+
+# Logs
+*.log
