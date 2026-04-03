@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 class FusionHeartModel:
     def __init__(self, cnn_path, xgb_path, scaler_path):
         # Load models and scaler
-        self.cnn_model = load_model(cnn_path)
+        self.cnn_model = load_model(cnn_path,compile=False)
         self.tabular_model = joblib.load(xgb_path)
         self.scaler = joblib.load(scaler_path)
         self.features = joblib.load(os.path.join(os.path.dirname(__file__), "models", "features.pkl"))
